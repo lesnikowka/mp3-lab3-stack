@@ -70,12 +70,11 @@ public:
 
 	}
 
-	const T& pop_back() {
+	T pop_back(){
 		if (size == 0) throw std::logic_error("vector is empty");
 
-		T tmp = data[size];
 		size--;
-		return tmp;
+		return data[size];
 	}
 
 	vector&  operator=(const vector& v) {
