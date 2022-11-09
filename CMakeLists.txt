@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-option(BUILD_SAMPLES ON)
+#option(BUILD_SAMPLES ON)
 
 set(PROJECT_NAME stack)
 project(${PROJECT_NAME})
@@ -14,9 +14,9 @@ set(MP2_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 add_subdirectory(include)
 
-if(BUILD_SAMPLES)
-	add_subdirectory(samples)
-endif()
+#if(BUILD_SAMPLES)
+#	add_subdirectory(samples)
+#endif()
 
 if(BUILD_TESTING)
     add_subdirectory(gtest)
