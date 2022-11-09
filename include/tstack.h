@@ -1,9 +1,8 @@
 ﻿#include "vector.h"
-#include <vector>
 
 template <class T>
 class TStack {
-    std::vector<T> pMem;
+    vector<T> pMem;
 
 public:
     TStack() = default;
@@ -15,15 +14,15 @@ public:
     T pop() {
         if (empty()) throw "stack is empty";
 
-        T elem = pMem[pMem.size() - 1];
+        T elem = pMem[pMem.get_size() - 1];
         pMem.pop_back();
 
         return elem;
     }
 
-    bool empty() const noexcept { return pMem.size() == 0; }
+    bool empty() const noexcept { return pMem.get_size() == 0; }
 
-    size_t count() const noexcept{ return pMem.size(); }
+    size_t count() const noexcept{ return pMem.get_size(); }
 
     TStack& operator=(const TStack& s){
         if (this != &s)
