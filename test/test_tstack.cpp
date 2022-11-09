@@ -3,7 +3,7 @@
 #include <gtest.h>
 
 TEST(TStack, can_create_stack) {
-	ASSERT_NO_THROW(TStack<int> st);
+	EXPECT_NO_THROW(TStack<int> st);
 }
 
 TEST(TStack, can_push_element_and_pop_it) {
