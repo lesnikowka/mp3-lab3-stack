@@ -16,7 +16,7 @@ class vector {
 	}
 
 public:
-	vector(size_t capacity = 0) {
+	vector(size_t capacity = 1) {
 		if (capacity < 0) throw std::logic_error("size cannot be less than 0");
 		size = 0;
 		this->capacity = capacity;
