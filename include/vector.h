@@ -14,6 +14,7 @@ class vector {
 		out << ")" << std::endl;
 		return out;
 	}
+
 	void resize(size_t newSize) {
 			capacity = (newSize + 1) * 2;
 			T* tempdata = new T[capacity];
@@ -32,6 +33,7 @@ public:
 		size = capacity = 0;
 		data = nullptr;
 	}
+
 	vector(size_t capacity) {
 		if (capacity < 0) throw std::logic_error("size cannot be less than 0");
 		size = 0;
@@ -54,7 +56,6 @@ public:
 		capacity = 0;
 		delete[] data;
 	}
-
 
 	size_t get_size() const noexcept {
 		return size;
