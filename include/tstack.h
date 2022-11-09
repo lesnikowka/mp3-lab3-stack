@@ -1,5 +1,6 @@
 ﻿#include "vector.h"
 #include <vector>
+#include <exception>
 
 template <class T>
 class TStack {
@@ -12,8 +13,8 @@ public:
 
     void push(const T& elem) { pMem.push_back(elem); }
 
-    const T& pop() {
-        if (empty()) throw std::logic_error("Stack is empty");
+    T pop() {
+        if (empty()) throw std::exception("Stack is empty");
 
         T elem = pMem[pMem.size() - 1];
         pMem.pop_back();
