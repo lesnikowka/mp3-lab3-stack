@@ -59,7 +59,7 @@ public:
 		}
 	}
 
-	size_t getsize() {
+	size_t get_size() const noexcept {
 		return size;
 	}
 
@@ -73,7 +73,7 @@ public:
 
 	}
 
-	T pop_back() {
+	const T& pop_back() {
 		if (size == 0) throw std::logic_error("vector is empty");
 
 		T tmp = data[size];
