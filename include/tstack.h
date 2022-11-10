@@ -3,7 +3,7 @@
 template <class T>
 class TStack {
     vector<T> pMem;
-
+    //
 public:
     TStack() = default;
 
