@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 #option(BUILD_SAMPLES ON)
+option(BUILD_TESTING ON)
 
 set(PROJECT_NAME stack)
 project(${PROJECT_NAME})
