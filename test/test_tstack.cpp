@@ -1,5 +1,4 @@
 #include "tstack.h"
-#include <vector>
 #include <gtest.h>
 
 TEST(TStack, can_create_stack) {
