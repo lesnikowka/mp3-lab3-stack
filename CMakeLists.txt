@@ -6,8 +6,8 @@ option(BUILD_TESTING ON)
 set(PROJECT_NAME stack)
 project(${PROJECT_NAME})
 
-include(CTest)
-enable_testing()  # defines BUILD_TESTING
+#include(CTest)
+#enable_testing()  # defines BUILD_TESTING
 
 set(MP2_TESTS   "test_${PROJECT_NAME}")
 set(MP2_CUSTOM_PROJECT "${PROJECT_NAME}")
