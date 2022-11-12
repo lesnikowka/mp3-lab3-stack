@@ -61,3 +61,18 @@ TEST(TStack, can_copy_stack) {
 	EXPECT_TRUE(equality);
 }
 
+TEST(TStack, can_assign_stack) {
+	bool equality = true;
+	TStack<int> st1, st2;
+	for (size_t i = 0; i < 20; i++)
+		st1.push(i);
+
+	st2 = st1;
+
+	if (st1.count() != st2.count()) equality = false;
+	while (!st1.empty())
+		if (st1.pop() != st2.pop()) equality = false;
+
+	EXPECT_TRUE(equality);
+}
+
